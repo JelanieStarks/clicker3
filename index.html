@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClkrGame</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="css/healthbars.css"> -->
+</head>
+<body>
+  
+  <nav>Tskr
+    <a href="https://github.com/jelan_vywny2u">Github</a>
+    <a href="https://jelan_vywny2u.github.io">Portfolio</a>
+    <a href="https://www.linkedin.com/in/jelan_vywny2u/">LinkedIn</a>
+    <a href="https://twitter.com/jelan_vywny2u">Twitter</a>
+    <a href="https://www.instagram.com/jelan_vywny2u/">Instagram</a>
+    <a href="https://www.facebook.com/jelan_vywny2u/">Facebook</a>
+    
+  </nav>
+  <div class="health-container">
+    <div class="health-bar" data-percentage="75"></div>
+    <div class="health-bar" data-percentage="50"></div>
+    <div class="health-bar" data-percentage="25"></div>
+  </div>
+   <div id="battle-area">
+      <div class="player">
+        <div class="health"></div>
+        <div class="attack"></div>
+      </div>
+      <div class="enemy">
+        <div class="health"></div>
+        <div class="attack"></div>
+      </div>
+    </div>
+  <header>HIT THE ATTACK BUTTON TO START</header>  
+  <button id="attack-button" class="attack-button" onclick="window.handleClick()">Attack</button>
+    <button>Task Complete</button>
+    <button>Bored Button</button>
+    <button onclick="toggleDropdown()">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <button onclick="upgradeHealth()">Upgrade Health</button>
+          <button onclick="upgradeEnergy()">Upgrade Energy</button>
+          <button onclick="upgradeAttack()">Upgrade Attack</button>
+          <button onclick="taskComplete()">Tasks Completed</button>
+          <button onclick="raiseInterest()">Raise Interest</button>
+        </div>
+    <div><p id="bank">Bank: 0</p></div>
+    <div><p id="health">Health: 100</p></div>
+    <div><p id="energy">Energy: 100</p></div>
+    <div><p id="attack">Attack: 1</p></div>
+    <div><p id="cost">Cost: 100</p></div>
+    <div><p id="level">Level: 1</p></div>
+    <p id="clickcount">Total Clicks: 0</p>   
+  
+<script src="scripts/player.js"></script>
+<script src="scripts/enemy.js"></script>
+<script src="scripts/exp.js"></script>
+<script src="scripts/bank.js"></script>
+<script src="scripts/healthbars.js"></script>
+<script src="scripts/game.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+
+
+</html>

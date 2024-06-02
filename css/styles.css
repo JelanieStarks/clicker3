@@ -1,0 +1,65 @@
+/* CSS for buttons */
+.attack-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    background-image: linear-gradient(90deg, rgba(247, 238, 12, 1) 5%, rgba(255, 151, 29, 1) 26%, rgba(233, 94, 52, 1) 45%, rgba(154, 39, 238, 1) 64%, rgba(35, 102, 247, 1) 81%, rgba(88, 139, 250, 1) 95%);
+  }
+  
+  .attack-button:hover {
+    opacity: .5;
+  }
+
+/* CSS for dropdown styling */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .show {
+    display: block;
+  }
+#battle-area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .player, .enemy {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 300px;
+      border: 1px solid black;
+      margin: 10px;
+    }
+    .player .health, .enemy .health {
+      width: 100%;
+      background-color: lightgreen;
+    }
+    .player .attack, .enemy .attack {
+      width: 100%;
+      background-color: lightblue;
+    }

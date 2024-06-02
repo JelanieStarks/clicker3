@@ -1,0 +1,19 @@
+{
+  "name": "clicker-game",
+  "version": "1.0.0",
+  "description": "My third clicker game",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JelanieStarks/clicker3.git"
+  },
+  "author": "Jelani Starks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JelanieStarks/clicker3/issues"
+  },
+  "homepage": "https://github.com/JelanieStarks/clicker3#readme"
+}
