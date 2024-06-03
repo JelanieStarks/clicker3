@@ -1,5 +1,64 @@
-/* CSS for buttons */
-.attack-button {
+/* Apply styles to the Arial font */
+.my-text {
+  font-family: Arial, sans-serif;
+  font-weight: bold; /* Make it bold */
+  color: white; /* White font color */
+  text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.8), /* White outline */
+    0 0 10px rgba(255, 0, 0, 0.5), /* Red underglow */
+    0 0 20px rgba(0, 255, 0, 0.5), /* Green underglow */
+    0 0 30px rgba(0, 0, 255, 0.5); /* Blue underglow */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-weight: bold; /* Make it bold */
+  color: white; /* White font color */
+  text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.8), /* White outline */
+    0 0 10px rgba(255, 0, 0, 0.5), /* Red underglow */
+    0 0 20px rgba(0, 255, 0, 0.5), /* Green underglow */
+    0 0 30px rgba(0, 0, 255, 0.5); /* Blue underglow */
+  
+    background: conic-gradient(
+    from 0deg,
+    #ff0000,
+    #ff8000,
+    #ffff00,
+    #80ff00,
+    #00ff00,
+    #00ff80,
+    #00ffff,
+    #0080ff,
+    #0000ff,
+    #8000ff,
+    #ff00ff,
+    #ff0080,
+    #ff0000
+  );
+  background-size: 200% 200%;
+  animation: spiral 10s linear infinite;
+}
+
+@keyframes spiral {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+#status {
+  margin-bottom: 20px;
+}
+
+button {
+  margin-bottom: 10px;
+}
+
+
+button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,7 +74,7 @@
     background-image: linear-gradient(90deg, rgba(247, 238, 12, 1) 5%, rgba(255, 151, 29, 1) 26%, rgba(233, 94, 52, 1) 45%, rgba(154, 39, 238, 1) 64%, rgba(35, 102, 247, 1) 81%, rgba(88, 139, 250, 1) 95%);
   }
   
-  .attack-button:hover {
+button:hover {
     opacity: .5;
   }
 
