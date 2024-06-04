@@ -10,40 +10,32 @@
 </head>
 <body>
   
-  <nav>Tskr
+  <nav id ="navbar">
+    <ul id="status">
+      <li id="money">Money: 0</li>
+      <li id="clickStrength">Click Strength: 1</li>
+      <li id="experience">Experience: </li>
+      <li id="level">Level: </li>
+    </ul>
   </nav>
-  <div class="health-container">
-    <div class="health-bar" data-percentage="75"></div>
-    <div class="health-bar" data-percentage="50"></div>
-    <div class="health-bar" data-percentage="25"></div>
-  </div>
-   <div id="battle-area">
-      <div class="player">
-        <div class="health">Health</div>
-        <div class="attack">attack</div>
-        <div class="experience"> Experience: <span id="experience">0</span></div>
-      </div>
-      <div class="enemy">
-        <div class="health">Enemy Health: <span id="enemyHealth">100</div>
-        <div class="attack"><button id="clickButton">Attack!!!!</button></div>
-      </div>
-  
-    </div>
+ 
   <header>HIT THE ATTACK BUTTON TO START</header>  
-    <div id="status">
-      Money: <span id="money">0</span>
-      <br>
-      Click Strength: <span id="clickStrength">1</span>
-      <br>
-      Enemy Health: <span id="enemyHealth">100</span>
-      <br>
-      Experience: <span id="experience">0</span>
-    </div>
+      <div class="player-and-enemy">
+       <div class="enemy">
+          <div class="level">Enemy Level: <span id="enemyLevel">1</span></div>
+          <div class="health">Enemy Health: <text id="enemyHealth">100</text></div>
+          <div class="attack"><button id="clickButton">Attack!!!!</button></div>
+        </div>
+      
+   </div>
+
     
-    <h2>Shop</h2>
-    <button id="autoClickerButton">Auto-Clicker (Cost: 10)</button>
-    <button id="clickValueUpgradeButton">Click Value Upgrade (Cost: 50)</button>
-    <button id="multiplierButton">Multiplier (Cost: 100)</button>
+   <h2 id="shop">Shop</h2>
+   <button id="autoClickerButton">Auto-Clicker (Cost: 10)</button>
+   <button id="clickValueUpgradeButton">Click Value Upgrade (Cost: 50)</button>
+   <button id="multiplierButton">Multiplier (Cost: 100)</button>
+    
+ 
 <script src="scripts/game.js"></script>
 </body>
 </html>

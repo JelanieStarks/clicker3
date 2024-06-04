@@ -1,124 +1,136 @@
-/* Apply styles to the Arial font */
+
+/* Navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.navbar li:hover {
+  background-color: #e9ecef;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.navbar li:hover ul {
+  display: block;
+}
+
+.navbar li ul {
+  display: none;
+  position: absolute;
+  background-color: #f8f9fa;
+  padding: 5px;
+}
+
+.navbar li ul li {
+  display: block;
+}
+
+.navbar li ul li:hover {
+  background-color: #e9ecef;
+  border-radius: 5px;
+}
+/* Styles for the Arial font */
+
+
 .my-text {
   font-family: Arial, sans-serif;
   font-weight: bold; /* Make it bold */
   color: white; /* White font color */
   text-shadow:
-    0 0 5px rgba(255, 255, 255, 0.8), /* White outline */
-    0 0 10px rgba(255, 0, 0, 0.5), /* Red underglow */
-    0 0 20px rgba(0, 255, 0, 0.5), /* Green underglow */
-    0 0 30px rgba(0, 0, 255, 0.5); /* Blue underglow */
+    /* Outline */
+    0 0 5px rgba(255, 255, 255, 0.8),
+    /* Underglow */
+    0 0 10px rgba(255, 0, 0, 0.5),
+    0 0 20px rgba(0, 255, 0, 0.5),
+    0 0 30px rgba(0, 0, 255, 0.5);
 }
 
-body {
+/* Styles for the page background */
+html, body {
+  background: linear-gradient(to right, #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080, #ff0000);
+  background-repeat: repeat-x;
+  background-size: 400% 100%;
+  animation: sweep 10s linear infinite;
+  -webkit-animation: sweep 10s linear infinite; /* Safari and Chrome */
   font-family: Arial, sans-serif;
   font-weight: bold; /* Make it bold */
   color: white; /* White font color */
-  text-shadow:
-    0 0 5px rgba(255, 255, 255, 0.8), /* White outline */
-    0 0 10px rgba(255, 0, 0, 0.5), /* Red underglow */
-    0 0 20px rgba(0, 255, 0, 0.5), /* Green underglow */
-    0 0 30px rgba(0, 0, 255, 0.5); /* Blue underglow */
-  
-    background: conic-gradient(
-    from 0deg,
-    #ff0000,
-    #ff8000,
-    #ffff00,
-    #80ff00,
-    #00ff00,
-    #00ff80,
-    #00ffff,
-    #0080ff,
-    #0000ff,
-    #8000ff,
-    #ff00ff,
-    #ff0080,
-    #ff0000
-  );
-  background-size: 200% 200%;
-  animation: spiral 10s linear infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-@keyframes spiral {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
+/* Animation for the page background */
+@keyframes sweep {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
+/* Styles for the status element */
 #status {
   margin-bottom: 20px;
 }
 
+/* Styles for buttons */
 button {
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  border-radius: 5px;
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  background-image: linear-gradient(90deg, rgba(247, 238, 12, 1) 5%, rgba(255, 151, 29, 1) 26%, rgba(233, 94, 52, 1) 45%, rgba(154, 39, 238, 1) 64%, rgba(35, 102, 247, 1) 81%, rgba(88, 139, 250, 1) 95%);
+}
+
+/* Styles for button hover */
+button:hover {
+  opacity: .5;
+}
+
+/* Styles for dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles for dropdown button */
+.dropdown-content button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
 
-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 18px;
-    border-radius: 5px;
-    width: 200px;
-    height: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-    background-image: linear-gradient(90deg, rgba(247, 238, 12, 1) 5%, rgba(255, 151, 29, 1) 26%, rgba(233, 94, 52, 1) 45%, rgba(154, 39, 238, 1) 64%, rgba(35, 102, 247, 1) 81%, rgba(88, 139, 250, 1) 95%);
-  }
-  
-button:hover {
-    opacity: .5;
-  }
-
-/* CSS for dropdown styling */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-
-  .dropdown-content button {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-
-  .show {
-    display: block;
-  }
-#battle-area {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .player, .enemy {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 200px;
-      height: 300px;
-      border: 1px solid black;
-      margin: 10px;
-    }
-    .player .health, .enemy .health {
-      width: 100%;
-      background-color: lightgreen;
-    }
-    .player .attack, .enemy .attack {
-      width: 100%;
-      background-color: lightblue;
-    }
